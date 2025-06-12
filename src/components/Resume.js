@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SKILLS, EXPERIENCE, EDUCATION, PROJECTS } from '../util/constants';
+import { SKILLS, EXPERIENCE, EDUCATION } from '../util/constants';
 import './Resume.css';
 
 const Resume = () => {
@@ -57,19 +57,6 @@ const Resume = () => {
                 <ul className="list-disc list-inside">
                   {edu.details.map((detail, idx) => (
                     <li key={idx}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-            <h3 className="section-title">Projects</h3>
-            {PROJECTS.map((project, index) => (
-              <div key={index} className="experience-item">
-                <h4 className="job-title">{project.title}</h4>
-                <p className="job-period">{project.technologies.join(', ')} • {project.date}</p>
-                <ul className="list-disc list-inside">
-                  {project.description.map((desc, idx) => (
-                    <li key={idx}>{desc}</li>
                   ))}
                 </ul>
               </div>

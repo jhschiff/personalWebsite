@@ -1,0 +1,56 @@
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-button.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.contact-button.email {
+  background-color: #ea4335;
+  color: white;
+}
+
+.contact-button.github {
+  background-color: #333;
+  color: white;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.contact-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+} 
