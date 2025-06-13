@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
+import blockM from '../assets/BlockM.png';
 
 const HomePage = () => {
   return (
@@ -29,6 +30,50 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
+              className="flex flex-col gap-2 mb-8"
+            >
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="text-gray-600"
+              >
+                🖥️ Full Stack Engineer at BNY
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="flex items-center gap-2 text-gray-600"
+              >
+                <img 
+                  src={blockM} 
+                  alt="University of Michigan Block M" 
+                  className="w-8 h-8 object-contain"
+                />
+                <span>University of Michigan College of Engineering</span>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="text-gray-600"
+              >
+                📚 B.S.E. Computer Science & Minor in Mathematics
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="text-gray-600"
+              >
+                📞 (720) 626-9100
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
               className="flex gap-4"
             >
               <ContactButtons />

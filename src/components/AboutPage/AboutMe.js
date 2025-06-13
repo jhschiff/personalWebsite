@@ -1,6 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import blockM from '../../assets/BlockM.png';
+import { 
+  FaBasketballBall, 
+  FaHiking, 
+  FaSkiing, 
+  FaPlane, 
+  FaUtensils,
+  FaBolt,
+  FaLightbulb,
+  FaStar,
+  FaEnvelope,
+  FaHandshake,
+  FaCode
+} from 'react-icons/fa';
 import '../../styles/About.css';
 
 const AboutMe = () => {
@@ -20,53 +32,33 @@ const AboutMe = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="about-header"
-          >
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="about-header p"
-            >
-              🖥️ Full Stack Engineer at BNY
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="institution-row"
-            >
-              <img src={blockM} alt="University of Michigan Block M" className="block-m-inline" />
-              University of Michigan College of Engineering
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              📚 B.S.E. Computer Science & Minor in Mathematics
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              📞 (720) 626-9100
-            </motion.p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
             className="about-content"
           >
+            <div className="flex gap-4 mb-2">
+              <FaCode className="text-2xl text-gray-700" />
+              <FaLightbulb className="text-2xl text-gray-700" />
+              <FaStar className="text-2xl text-gray-700" />
+            </div>
             <p className="about-intro">
-              I'm Jordan, a passionate software engineer with extensive experience in full-stack development and a drive to build products that make a meaningful impact. Currently based in Pittsburgh, but looking to move to NYC.
+              I'm Jordan, a passionate software engineer with extensive experience in full-stack development and a drive to build products that make a meaningful impact. Based in Pittsburgh with plans to relocate to NYC, I bring both technical expertise and a collaborative mindset to every project.
+            </p>
+            <div className="flex gap-4 my-2">
+              <FaBasketballBall className="text-2xl text-gray-700" />
+              <FaHiking className="text-2xl text-gray-700" />
+              <FaSkiing className="text-2xl text-gray-700" />
+              <FaPlane className="text-2xl text-gray-700" />
+              <FaUtensils className="text-2xl text-gray-700" />
+            </div>
+            <p className="about-intro">
+              When I'm not coding, I enjoy embracing an active lifestyle through basketball, hiking, and skiing. I'm also an avid traveler and love trying new restaurants, always seeking new experiences and flavors.
+            </p>
+            <div className="flex gap-4 my-2">
+              <FaEnvelope className="text-2xl text-gray-700" />
+              <FaHandshake className="text-2xl text-gray-700" />
+              <FaBolt className="text-2xl text-gray-700" />
+            </div>
+            <p className="about-intro">
+              Let's connect! Talk about your next project, potential job opportunity, or shoot some hoops
             </p>
           </motion.div>
         </div>
