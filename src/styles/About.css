@@ -132,4 +132,96 @@
 
 .tech-stack-title {
   margin-top: 0;
+}
+
+.block-m-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.block-m {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
+.institution-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.block-m-inline {
+  width: 24px;
+  height: auto;
+  object-fit: contain;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.education-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.education-card-header h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.education-icon {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.education-card-content {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.coursework-grid, .activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-pill, .activity-pill {
+  background-color: #eff6ff;
+  color: #1e40af;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.course-pill:hover, .activity-pill:hover {
+  background-color: #dbeafe;
+  transform: translateY(-2px);
 } 

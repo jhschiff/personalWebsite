@@ -75,5 +75,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Jordan Schiff
 - Phone: (720) 626-9100
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn]
+- Email: jordan41schiff@gmail.com
+- LinkedIn: https://www.linkedin.com/in/jhschiff/

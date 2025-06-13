@@ -71,20 +71,18 @@ export const EXPERIENCE = [
   }
 ];
 
-export const EDUCATION = [
-  {
-    degree: 'B.S.E. Computer Science',
-    institution: 'University of Michigan – Ann Arbor',
-    location: 'Ann Arbor, MI',
-    period: 'Graduated Magna Cum Laude - May 2024',
-    details: [
-      'Minor: Mathematics & International Minor for Engineers',
-      'GPA: 3.65 (Dean\'s List 2020-2023)',
-      'Relevant Coursework: Web Systems (EECS 485), Machine Learning (EECS 445), Data Structures & Algorithms (EECS 281), Computer Security (EECS 388), Software Engineering (EECS 481), Database Management (EECS 484), Computer Organization (EECS 370), Linear Algebra (MATH 214), Finance Mathematics (MATH 423), Calculus III (MATH 215)',
-      'Activities & Societies: Wolverine Blockchain, Mensa Society, Maimonides Scholar, Alpha Epsilon Pi Fraternity'
-    ]
-  }
-];
+export const COLLEGE = {
+  degree: 'B.S.E. Computer Science',
+  institution: 'University of Michigan – Ann Arbor',
+  location: 'Ann Arbor, MI',
+  period: 'Graduated Magna Cum Laude - May 2024',
+  details: [
+    'Minor: Mathematics & International Minor for Engineers',
+    'GPA: 3.65 (Dean\'s List 2020-2023)',
+    'Relevant Coursework: Web Systems (EECS 485), Machine Learning (EECS 445), Data Structures & Algorithms (EECS 281), Computer Security (EECS 388), Software Engineering (EECS 481), Database Management (EECS 484), Computer Organization (EECS 370), Linear Algebra (MATH 214), Finance Mathematics (MATH 423), Calculus III (MATH 215)',
+    'Activities & Societies: Wolverine Blockchain, Mensa Society, Maimonides Scholar, Alpha Epsilon Pi Fraternity'
+  ]
+};
 
 // Can add github links and demo links to projects
 export const PROJECTS = [

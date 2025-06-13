@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import blockM from '../../assets/BlockM.png';
 import '../../styles/About.css';
 
 const AboutMe = () => {
@@ -34,8 +35,10 @@ const AboutMe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
+              className="institution-row"
             >
-              🏫 University of Michigan College of Engineering
+              <img src={blockM} alt="University of Michigan Block M" className="block-m-inline" />
+              University of Michigan College of Engineering
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
