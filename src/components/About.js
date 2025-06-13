@@ -10,7 +10,7 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-section">
-      <section id="about" className="py-20">
+      <section id="about">
         <div className="about-container">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -35,18 +35,18 @@ const About = () => {
 
       <Experience />
 
-      <section id="projects" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="projects-title"
-        >
-          Projects
-        </motion.h3>
+      <section id="projects">
+        <div className="projects-container">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="projects-title"
+          >
+            Projects
+          </motion.h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="projects-grid">
             {PROJECTS.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}

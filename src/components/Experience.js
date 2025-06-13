@@ -26,7 +26,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="pt-0 pb-20">
+    <section id="experience">
       <div className="experience-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const Experience = () => {
 
               {/* Right Side - Achievements and Skills */}
               <div className="timeline-right">
-                <div className="skills-container mb-4">
+                <div className="skills-container">
                   {job.skills.map((skill, index) => (
                     <span key={index} className={`skill-pill ${skill.category.toLowerCase()}`}>
                       {skill.name}

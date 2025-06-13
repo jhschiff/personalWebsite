@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { EXPERIENCE, EDUCATION } from '../util/constants';
+import { EDUCATION } from '../util/constants';
 import './Resume.css';
 
 const Resume = () => {
