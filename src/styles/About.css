@@ -40,11 +40,6 @@
   margin: 0.75rem 0;
 }
 
-.about-header p:first-child {
-  color: #2563eb;
-  font-weight: 600;
-}
-
 .about-intro {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -148,6 +143,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: rgb(75 85 99);
 }
 
 .block-m-inline {
@@ -300,20 +296,26 @@
 }
 
 .achievement-content .gpa {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1e40af;
   margin: 0;
 }
 
 .honors-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.achievement-content .honors {
+.honor-pill {
+  background-color: #f3f4f6;
   color: #4b5563;
-  font-style: italic;
-  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.honor-pill:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
 } 

@@ -27,6 +27,7 @@ const AboutMe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
+              className="about-header p"
             >
               🖥️ Full Stack Engineer at BNY
             </motion.p>

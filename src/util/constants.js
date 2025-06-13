@@ -6,8 +6,8 @@ export const EXPERIENCE = [
     period: 'August 2024 - Present',
     skills: [
       { name: 'Java', category: 'Languages' },
-      { name: 'Spring Boot', category: 'Backend' },
       { name: 'Angular', category: 'Frontend' },
+      { name: 'Spring Boot', category: 'Backend' },
       { name: 'JUnit', category: 'DevOps' },
       { name: 'Mockito', category: 'DevOps' }
     ],
@@ -23,10 +23,10 @@ export const EXPERIENCE = [
     location: 'Remote',
     period: 'January 2025 - Present',
     skills: [
+      { name: 'JavaScript', category: 'Languages' },
       { name: 'React', category: 'Frontend' },
       { name: 'CSS', category: 'Frontend' },
       { name: 'HTML', category: 'Frontend' },
-      { name: 'JavaScript', category: 'Languages' },
       { name: 'Domain Management', category: 'DevOps' }
     ],
     achievements: [
@@ -40,9 +40,9 @@ export const EXPERIENCE = [
     location: 'Boulder, CO',
     period: 'May 2023 - July 2023',
     skills: [
+      { name: 'C#', category: 'Languages' },
       { name: 'React', category: 'Frontend' },
       { name: 'Redux', category: 'Frontend' },
-      { name: 'C#', category: 'Languages' },
       { name: 'ASP.NET', category: 'Backend' },
       { name: 'SQL', category: 'Backend' },
       { name: 'Azure', category: 'DevOps' }
@@ -61,7 +61,7 @@ export const EXPERIENCE = [
     period: 'June 2022 - August 2022',
     skills: [
       { name: 'Python', category: 'Languages' },
-      { name: 'NLP', category: 'Backend' },
+      { name: 'Natural Language Processing', category: 'Backend' },
       { name: 'Data Analysis', category: 'Backend' },
       { name: 'Database Management', category: 'Backend' }
     ],
@@ -80,13 +80,11 @@ export const COLLEGE = {
     'Mathematics',
     'International Minor for Engineers'
   ],
-  academicAchievement: {
-    gpa: '3.7',
-    honors: [
-      'Dean\'s List 2020-2023',
-      'Graduated Magna Cum Laude'
-    ]
-  },
+  academicAchievement: [
+    'GPA: 3.7',
+    'Dean\'s List 2020-2023',
+    'Graduated Magna Cum Laude'
+  ],
   coursework: [
     { name: 'Web Systems', code: 'EECS 485' },
     { name: 'Machine Learning', code: 'EECS 445' },
@@ -140,7 +138,7 @@ export const PROJECTS = [
 export const TECH_STACK = {
   languages: {
     title: 'Languages',
-    items: ['JavaScript', 'Python', 'C++/ C/ C#', 'Java', 'HTML/CSS'],
+    items: ['JavaScript', 'Python', 'C++', 'C', 'C#', 'Java', 'HTML/CSS'],
     description: 'Proficient in multiple programming languages with a focus on modern web development and data analysis.'
   },
   frontend: {
@@ -155,7 +153,7 @@ export const TECH_STACK = {
   },
   devops: {
     title: 'DevOps & Tools',
-    items: ['Git', 'Linux', 'AWS', 'Docker', 'VS Code/ IntelliJ'],
+    items: ['Git', 'Linux', 'AWS', 'Docker', 'VS Code', 'IntelliJ'],
     description: 'Managing infrastructure, deployments, and development workflows with modern DevOps practices.'
   }
 };

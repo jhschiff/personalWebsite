@@ -107,12 +107,11 @@ const Education = () => {
               <FaStar className="education-icon" />,
               "Academic Achievement",
               <div className="achievement-content">
-                <p className="gpa">GPA: {COLLEGE.academicAchievement.gpa}</p>
                 <div className="honors-list">
-                  {COLLEGE.academicAchievement.honors.map((honor, index) => (
-                    <p key={index} className="honors">
-                      {honor}
-                    </p>
+                  {COLLEGE.academicAchievement.map((achievement, index) => (
+                    <span key={index} className="honor-pill">
+                      {achievement}
+                    </span>
                   ))}
                 </div>
               </div>
