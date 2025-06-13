@@ -32,13 +32,21 @@ src/
 │   │   ├── AboutMe.js
 │   │   ├── Education.js
 │   │   ├── Experience.js
+│   │   ├── ProjectCard.js
 │   │   └── TechStack.js
-│   ├── ProjectCard.js
+│   ├── HomePage/
+│   │   └── ContactButtons.js
+│   ├── Navigation.js
+│   ├── HomePage.js
 │   └── About.js
+├── styles/
+│   └── *.css
+├── assets/
+│   └── [images and other assets]
 ├── util/
 │   └── constants.js
-└── styles/
-    └── About.css
+├── App.js
+└── index.js
 ```
 
 ## 🚀 Getting Started

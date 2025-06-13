@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './AboutPage/ProjectCard';
 import TechStack from './AboutPage/TechStack';
 import Experience from './AboutPage/Experience';
 import AboutMe from './AboutPage/AboutMe';
