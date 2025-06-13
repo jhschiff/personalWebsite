@@ -137,4 +137,4 @@ export const TECH_STACK = {
     items: ['Git', 'Linux', 'AWS', 'Docker', 'VS Code/ IntelliJ'],
     description: 'Managing infrastructure, deployments, and development workflows with modern DevOps practices.'
   }
-}; 
+};
