@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TECH_STACK } from '../util/constants';
-import './TechStack.css';
+import { TECH_STACK } from '../../util/constants';
+import '../../styles/TechStack.css';
 
 // Icons
 const CodeIcon = () => (
@@ -54,7 +54,7 @@ const TechStack = () => {
           viewport={{ once: true }}
           className="tech-stack-title"
         >
-          My Tech Stack
+          Tech Stack
         </motion.h3>
 
         <div className="tech-stack-grid">

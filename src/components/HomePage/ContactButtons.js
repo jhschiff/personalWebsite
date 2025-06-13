@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './ContactButtons.css';
+import '../../styles/ContactButtons.css';
 
 const ContactButtons = () => {
   return (

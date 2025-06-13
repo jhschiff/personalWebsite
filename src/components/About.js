@@ -1,34 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import Resume from './Resume';
-import TechStack from './TechStack';
-import Experience from './Experience';
+import TechStack from './AboutPage/TechStack';
+import Experience from './AboutPage/Experience';
+import AboutMe from './AboutPage/AboutMe';
+import Education from './AboutPage/Education';
 import { PROJECTS } from '../util/constants';
-import './About.css';
+import '../styles/About.css';
 
 const About = () => {
   return (
     <div className="about-section">
       <section id="about">
         <div className="about-container">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="about-title"
-          >
-            About Me
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="about-intro"
-          >
-            I'm Jordan, a passionate software engineer with extensive experience in full-stack development and a drive to build products that make a meaningful impact. Currently based in Pittsburgh, but looking to move to NYC.
-          </motion.p>
+          <AboutMe />
           <TechStack />
         </div>
       </section>
@@ -53,7 +38,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Resume />
+
+      <Education />
     </div>
   );
 };

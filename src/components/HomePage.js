@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContactButtons from './ContactButtons';
+import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
 
 const HomePage = () => {

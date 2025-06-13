@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { EXPERIENCE } from '../util/constants';
-import './Experience.css';
+import { EXPERIENCE } from '../../util/constants';
+import '../../styles/Experience.css';
 
 // Import company logos
-import BNYLogo from '../assets/BNYLogo.png';
-import RSALogo from '../assets/RSALogo.png';
-import CongruexLogo from '../assets/CongruexLogo.png';
-import IVCLogo from '../assets/IVCLogo.jpg';
+import BNYLogo from '../../assets/BNYLogo.png';
+import RSALogo from '../../assets/RSALogo.png';
+import CongruexLogo from '../../assets/CongruexLogo.png';
+import IVCLogo from '../../assets/IVCLogo.jpg';
 
 const Experience = () => {
   const getLogo = (company) => {
@@ -28,14 +28,14 @@ const Experience = () => {
   return (
     <section id="experience">
       <div className="experience-container">
-        <motion.h2
+        <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="experience-title"
         >
           Professional Journey
-        </motion.h2>
+        </motion.h3>
 
         <div className="timeline">
           {EXPERIENCE.map((job, index) => (

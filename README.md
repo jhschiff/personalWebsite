@@ -1,69 +1,79 @@
-# Personal Website
+# Personal Portfolio Website
 
-A modern, responsive personal website built with React and Tailwind CSS.
+A modern, responsive personal portfolio website built with React and Framer Motion. This website showcases my professional experience, projects, and skills in an interactive and visually appealing way.
 
-## Features
+## 🚀 Features
 
-- Responsive design that works on all devices
-- Smooth scrolling navigation
-- Animated sections using Framer Motion
-- Project showcase with GitHub and demo links
-- Interactive resume section
-- Modern UI with Tailwind CSS
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **Modern UI/UX**: Clean and professional design with smooth animations
+- **Interactive Components**: 
+  - About Me section with professional background
+  - Tech Stack showcase
+  - Experience timeline
+  - Project portfolio with detailed cards
+  - Education section
+- **Smooth Animations**: Powered by Framer Motion for engaging user interactions
+- **Performance Optimized**: Built with performance and best practices in mind
 
-## Getting Started
+## 🛠️ Technologies Used
 
-### Prerequisites
+- React.js
+- Framer Motion
+- CSS3
+- JavaScript (ES6+)
+- HTML5
 
-- Node.js (v14 or higher)
-- npm or yarn
+## 📦 Project Structure
 
-### Installation
+```
+src/
+├── components/
+│   ├── AboutPage/
+│   │   ├── AboutMe.js
+│   │   ├── Education.js
+│   │   ├── Experience.js
+│   │   └── TechStack.js
+│   ├── ProjectCard.js
+│   └── About.js
+├── util/
+│   └── constants.js
+└── styles/
+    └── About.css
+```
+
+## 🚀 Getting Started
 
 1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/personal-website.git
-cd personal-website
-```
+   ```bash
+   git clone [repository-url]
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
-```bash
-npm start
-```
+   ```bash
+   npm start
+   ```
 
-The website will be available at `http://localhost:3000`.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Customization
+## 🎨 Customization
 
-1. Update the personal information in `src/App.js`
-2. Add your projects to the `projects` array in `src/App.js`
-3. Replace the placeholder headshot image in the `public` directory
-4. Add your resume PDF to the `public` directory
-5. Customize the styling by modifying the Tailwind classes or extending the theme in `tailwind.config.js`
+- Update personal information in the respective component files
+- Modify the `PROJECTS` array in `constants.js` to showcase your projects
+- Customize styles in the CSS files
+- Add or remove sections as needed
 
-## Building for Production
+## 📝 License
 
-To create a production build:
+This project is open source and available under the [MIT License](LICENSE).
 
-```bash
-npm run build
-```
+## 👤 Contact
 
-The build files will be in the `build` directory.
-
-## Technologies Used
-
-- React
-- Tailwind CSS
-- Framer Motion
-- React Icons
-- React Scroll
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Jordan Schiff
+- Phone: (720) 626-9100
+- Email: [Your Email]
+- LinkedIn: [Your LinkedIn]
