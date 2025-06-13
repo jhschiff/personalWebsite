@@ -76,7 +76,7 @@ export const EDUCATION = [
     degree: 'B.S.E. Computer Science',
     institution: 'University of Michigan – Ann Arbor',
     location: 'Ann Arbor, MI',
-    period: 'Graduated - May 2024',
+    period: 'Graduated Magna Cum Laude - May 2024',
     details: [
       'Minor: Mathematics & International Minor for Engineers',
       'GPA: 3.65 (Dean\'s List 2020-2023)',
