@@ -34,28 +34,35 @@ const Education = () => {
         >
           Education
         </motion.h3>
-        <div className="about-columns">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="about-header"
-          >
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="education-header-block"
+        >
+          <div className="education-header-content">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="block-m-container"
+            >
+              <img src={blockM} alt="University of Michigan Block M" className="block-m" />
+            </motion.div>
+            <motion.h4
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              {COLLEGE.institution}
+            </motion.h4>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="institution-row"
-            >
-              <img src={blockM} alt="University of Michigan Block M" className="block-m-inline" />
-              {COLLEGE.institution}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
             >
               📚 {COLLEGE.degree}
             </motion.p>
@@ -63,59 +70,65 @@ const Education = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.3 }}
             >
               📅 {COLLEGE.period}
             </motion.p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="about-content"
-          >
-            <div className="education-cards">
-              {renderDetailCard(
-                <FaGraduationCap className="education-icon" />,
-                "Minors",
-                <p>{COLLEGE.details[0].replace('Minor: ', '')}</p>
-              )}
-              {renderDetailCard(
-                <FaStar className="education-icon" />,
-                "Academic Achievement",
-                <p>{COLLEGE.details[1].replace('GPA: ', '')}</p>
-              )}
-              {renderDetailCard(
-                <FaBook className="education-icon" />,
-                "Relevant Coursework",
-                <div className="coursework-grid">
-                  {COLLEGE.details[2]
-                    .replace('Relevant Coursework: ', '')
-                    .split(', ')
-                    .map((course, index) => (
-                      <span key={index} className="course-pill">
-                        {course}
-                      </span>
-                    ))}
+          </div>
+        </motion.div>
+
+        <div className="education-details-grid">
+          <div className="education-details-column">
+            {renderDetailCard(
+              <FaGraduationCap className="education-icon" />,
+              "Minors",
+              <div className="minors-list">
+                {COLLEGE.minors.map((minor, index) => (
+                  <span key={index} className="minor-pill">
+                    {minor}
+                  </span>
+                ))}
+              </div>
+            )}
+            {renderDetailCard(
+              <FaBook className="education-icon" />,
+              "Relevant Coursework",
+              <div className="coursework-grid">
+                {COLLEGE.coursework.map((course, index) => (
+                  <span key={index} className="course-pill">
+                    {course.name} ({course.code})
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="education-details-column">
+            {renderDetailCard(
+              <FaStar className="education-icon" />,
+              "Academic Achievement",
+              <div className="achievement-content">
+                <p className="gpa">GPA: {COLLEGE.academicAchievement.gpa}</p>
+                <div className="honors-list">
+                  {COLLEGE.academicAchievement.honors.map((honor, index) => (
+                    <p key={index} className="honors">
+                      {honor}
+                    </p>
+                  ))}
                 </div>
-              )}
-              {renderDetailCard(
-                <FaUsers className="education-icon" />,
-                "Activities & Societies",
-                <div className="activities-grid">
-                  {COLLEGE.details[3]
-                    .replace('Activities & Societies: ', '')
-                    .split(', ')
-                    .map((activity, index) => (
-                      <span key={index} className="activity-pill">
-                        {activity}
-                      </span>
-                    ))}
-                </div>
-              )}
-            </div>
-          </motion.div>
+              </div>
+            )}
+            {renderDetailCard(
+              <FaUsers className="education-icon" />,
+              "Activities & Societies",
+              <div className="activities-grid">
+                {COLLEGE.activities.map((activity, index) => (
+                  <span key={index} className="activity-pill">
+                    {activity}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

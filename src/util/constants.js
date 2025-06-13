@@ -76,11 +76,34 @@ export const COLLEGE = {
   institution: 'University of Michigan – Ann Arbor',
   location: 'Ann Arbor, MI',
   period: 'Graduated Magna Cum Laude - May 2024',
-  details: [
-    'Minor: Mathematics & International Minor for Engineers',
-    'GPA: 3.65 (Dean\'s List 2020-2023)',
-    'Relevant Coursework: Web Systems (EECS 485), Machine Learning (EECS 445), Data Structures & Algorithms (EECS 281), Computer Security (EECS 388), Software Engineering (EECS 481), Database Management (EECS 484), Computer Organization (EECS 370), Linear Algebra (MATH 214), Finance Mathematics (MATH 423), Calculus III (MATH 215)',
-    'Activities & Societies: Wolverine Blockchain, Mensa Society, Maimonides Scholar, Alpha Epsilon Pi Fraternity'
+  minors: [
+    'Mathematics',
+    'International Minor for Engineers'
+  ],
+  academicAchievement: {
+    gpa: '3.7',
+    honors: [
+      'Dean\'s List 2020-2023',
+      'Graduated Magna Cum Laude'
+    ]
+  },
+  coursework: [
+    { name: 'Web Systems', code: 'EECS 485' },
+    { name: 'Machine Learning', code: 'EECS 445' },
+    { name: 'Data Structures & Algorithms', code: 'EECS 281' },
+    { name: 'Computer Security', code: 'EECS 388' },
+    { name: 'Software Engineering', code: 'EECS 481' },
+    { name: 'Database Management', code: 'EECS 484' },
+    { name: 'Computer Organization', code: 'EECS 370' },
+    { name: 'Linear Algebra', code: 'MATH 214' },
+    { name: 'Finance Mathematics', code: 'MATH 423' },
+    { name: 'Calculus III', code: 'MATH 215' }
+  ],
+  activities: [
+    'Wolverine Blockchain',
+    'Mensa Society',
+    'Maimonides Scholar',
+    'Alpha Epsilon Pi Fraternity'
   ]
 };
 
