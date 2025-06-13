@@ -59,7 +59,7 @@ const HomePage = () => {
                 transition={{ delay: 0.7 }}
                 className="text-gray-600"
               >
-                📚 B.S.E. Computer Science & Minor in Mathematics
+                📚 B.S.E. Computer Science & Minor in Mathematics, Graduated Magna Cum Laude
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
