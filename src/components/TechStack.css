@@ -1,0 +1,141 @@
+.tech-stack-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tech-stack-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tech-stack-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+/* Languages Card */
+.tech-stack-card:nth-child(1) .tech-stack-card-title {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tech-stack-card:nth-child(1) .tech-stack-list li {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+}
+
+.tech-stack-card:nth-child(1) .tech-stack-list li:hover {
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+}
+
+/* Frontend Card */
+.tech-stack-card:nth-child(2) .tech-stack-card-title {
+  color: #7c3aed;
+  border-bottom-color: #7c3aed;
+}
+
+.tech-stack-card:nth-child(2) .tech-stack-list li {
+  background-color: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #5b21b6;
+}
+
+.tech-stack-card:nth-child(2) .tech-stack-list li:hover {
+  background-color: #ede9fe;
+  border-color: #c4b5fd;
+}
+
+/* Backend Card */
+.tech-stack-card:nth-child(3) .tech-stack-card-title {
+  color: #059669;
+  border-bottom-color: #059669;
+}
+
+.tech-stack-card:nth-child(3) .tech-stack-list li {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.tech-stack-card:nth-child(3) .tech-stack-list li:hover {
+  background-color: #d1fae5;
+  border-color: #6ee7b7;
+}
+
+/* DevOps Card */
+.tech-stack-card:nth-child(4) .tech-stack-card-title {
+  color: #dc2626;
+  border-bottom-color: #dc2626;
+}
+
+.tech-stack-card:nth-child(4) .tech-stack-list li {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.tech-stack-card:nth-child(4) .tech-stack-list li:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack-list li {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tech-stack-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-stack-card {
+    padding: 1.25rem;
+  }
+} 

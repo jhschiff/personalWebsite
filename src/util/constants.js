@@ -4,6 +4,13 @@ export const EXPERIENCE = [
     company: 'BNY',
     location: 'Pittsburgh, PA',
     period: 'August 2024 - Present',
+    skills: [
+      { name: 'Java', category: 'Languages' },
+      { name: 'Spring Boot', category: 'Backend' },
+      { name: 'Angular', category: 'Frontend' },
+      { name: 'JUnit', category: 'DevOps' },
+      { name: 'Mockito', category: 'DevOps' }
+    ],
     achievements: [
       'Full stack developer for Private Wealth Management Online Platform in Java Spring Boot and Angular',
       'Developed functionality for opening Insured Cash Sweep (ICS) accounts and enabled users to manage custom transaction categories',
@@ -15,6 +22,13 @@ export const EXPERIENCE = [
     company: 'Resolute Senior Advocates (Startup)',
     location: 'Remote',
     period: 'January 2025 - Present',
+    skills: [
+      { name: 'React', category: 'Frontend' },
+      { name: 'CSS', category: 'Frontend' },
+      { name: 'HTML', category: 'Frontend' },
+      { name: 'JavaScript', category: 'Languages' },
+      { name: 'Domain Management', category: 'DevOps' }
+    ],
     achievements: [
       'Developed a responsive website for a startup using React, implementing extensive CSS styling to enhance UI/UX',
       'Successfully launched a custom domain (rsaus.com), established company emails, and created a company LinkedIn page to drive client acquisition enhancing the startup\'s online presence'
@@ -25,6 +39,14 @@ export const EXPERIENCE = [
     company: 'Congruex',
     location: 'Boulder, CO',
     period: 'May 2023 - July 2023',
+    skills: [
+      { name: 'React', category: 'Frontend' },
+      { name: 'Redux', category: 'Frontend' },
+      { name: 'C#', category: 'Languages' },
+      { name: 'ASP.NET', category: 'Backend' },
+      { name: 'SQL', category: 'Backend' },
+      { name: 'Azure', category: 'DevOps' }
+    ],
     achievements: [
       'Built a full stack responsive Company-Wide Intranet web application using React and Redux incorporating advanced react-router navigation and state management strategies',
       'Implemented a tailored database schema on a SQL server, aligning with the precise demands of the application',
@@ -37,8 +59,13 @@ export const EXPERIENCE = [
     company: 'IVC Data and Insights',
     location: 'Tel Aviv, Israel',
     period: 'June 2022 - August 2022',
+    skills: [
+      { name: 'Python', category: 'Languages' },
+      { name: 'NLP', category: 'Backend' },
+      { name: 'Data Analysis', category: 'Backend' },
+      { name: 'Database Management', category: 'Backend' }
+    ],
     achievements: [
-      'Researched Agritech and defined six sub-sectors to categorize the industry for the IVC database',
       'Implemented a natural language processing algorithm to accurately categorize 800+ Agritech companies into the correct sub-sector to optimize database management'
     ]
   }
@@ -49,7 +76,7 @@ export const EDUCATION = [
     degree: 'B.S.E. Computer Science',
     institution: 'University of Michigan – Ann Arbor',
     location: 'Ann Arbor, MI',
-    period: 'Graduated – May 2024',
+    period: 'Graduated - May 2024',
     details: [
       'Minor: Mathematics & International Minor for Engineers',
       'GPA: 3.65 (Dean\'s List 2020-2023)',
@@ -87,4 +114,27 @@ export const PROJECTS = [
       'Developed a program that uses natural language processing and machine learning techniques to automatically identify the subject of posts from the class\'s forum-type discussion platform platform utilizing recursion and Bag of Words Model'
     ]
   },
-]; 
+];
+
+export const TECH_STACK = {
+  languages: {
+    title: 'Languages',
+    items: ['JavaScript', 'Python', 'C++/ C/ C#', 'Java', 'HTML/CSS'],
+    description: 'Proficient in multiple programming languages with a focus on modern web development and data analysis.'
+  },
+  frontend: {
+    title: 'Frontend',
+    items: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    description: 'Building responsive, type-safe React applications with modern state management and smooth animations.'
+  },
+  backend: {
+    title: 'Backend & Data',
+    items: ['FastAPI', 'Node.js', 'PostgreSQL', 'Jupyter Notebook', '.NET Framework'],
+    description: 'Developing robust backend systems, APIs, and data solutions with modern frameworks and databases.'
+  },
+  devops: {
+    title: 'DevOps & Tools',
+    items: ['Git', 'Linux', 'AWS', 'Docker', 'VS Code/ IntelliJ'],
+    description: 'Managing infrastructure, deployments, and development workflows with modern DevOps practices.'
+  }
+}; 
