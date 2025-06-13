@@ -1,26 +1,3 @@
-export const SKILLS = {
-  languages: [
-    'C++/C',
-    'Python',
-    'Java',
-    'JavaScript (React and NodeJS)',
-    'C#',
-    'HTML',
-    'CSS',
-    'R',
-    'MatLab'
-  ],
-  technologies: [
-    'Git',
-    'Linux',
-    'SQL Databases',
-    '.NET Framework',
-    'API Design',
-    'AWS',
-    'Jupyter Notebook'
-  ]
-};
-
 export const EXPERIENCE = [
   {
     title: 'Software Engineer',
@@ -82,6 +59,7 @@ export const EDUCATION = [
   }
 ];
 
+// Can add github links and demo links to projects
 export const PROJECTS = [
   {
     title: 'Server-Side & Client-Side Dynamic Pages Site Generator',
@@ -109,25 +87,4 @@ export const PROJECTS = [
       'Developed a program that uses natural language processing and machine learning techniques to automatically identify the subject of posts from the class\'s forum-type discussion platform platform utilizing recursion and Bag of Words Model'
     ]
   },
-  {
-    title: 'Project One',
-    description: 'A full-stack web application built with React and Node.js that helps users manage their daily tasks efficiently.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-    githubLink: 'https://github.com/yourusername/project-one',
-    demoLink: 'https://project-one-demo.com'
-  },
-  {
-    title: 'Project Two',
-    description: 'An AI-powered image recognition system that can identify and classify objects in real-time.',
-    technologies: ['Python', 'TensorFlow', 'OpenCV', 'Flask'],
-    githubLink: 'https://github.com/yourusername/project-two',
-    demoLink: 'https://project-two-demo.com'
-  },
-  {
-    title: 'Project Three',
-    description: 'A mobile-first e-commerce platform with real-time inventory management and payment processing.',
-    technologies: ['React Native', 'Firebase', 'Stripe', 'Redux'],
-    githubLink: 'https://github.com/yourusername/project-three',
-    demoLink: 'https://project-three-demo.com'
-  }
 ]; 

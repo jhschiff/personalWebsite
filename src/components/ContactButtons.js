@@ -44,6 +44,20 @@ const ContactButtons = () => {
         </svg>
         <span>GitHub</span>
       </motion.a>
+
+      <motion.a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-button resume"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <svg className="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        <span>Resume</span>
+      </motion.a>
     </div>
   );
 };
