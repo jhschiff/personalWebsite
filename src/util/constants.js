@@ -75,7 +75,6 @@ export const COLLEGE = {
   degree: 'B.S.E. Computer Science',
   institution: 'University of Michigan – Ann Arbor',
   location: 'Ann Arbor, MI',
-  period: 'Graduated Magna Cum Laude - May 2024',
   minors: [
     'Mathematics',
     'International Minor for Engineers'
@@ -144,16 +143,16 @@ export const TECH_STACK = {
   frontend: {
     title: 'Frontend',
     items: ['React', 'TypeScript', 'Tailwind', 'Vite'],
-    description: 'Building responsive, type-safe React applications with modern state management and smooth animations.'
+    description: 'Built responsive, type-safe React applications with modern state management and smooth animations.'
   },
   backend: {
     title: 'Backend & Data',
     items: ['FastAPI', 'Node.js', 'PostgreSQL', 'Jupyter Notebook', '.NET Framework'],
-    description: 'Developing robust backend systems, APIs, and data solutions with modern frameworks and databases.'
+    description: 'Developed robust backend systems, APIs, and data solutions with modern frameworks and databases.'
   },
   devops: {
     title: 'DevOps & Tools',
     items: ['Git', 'Linux', 'AWS', 'Docker', 'VS Code', 'IntelliJ'],
-    description: 'Managing infrastructure, deployments, and development workflows with modern DevOps practices.'
+    description: 'Managed infrastructure, deployments, and development workflows with modern DevOps practices.'
   }
 };

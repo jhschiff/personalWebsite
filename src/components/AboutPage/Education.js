@@ -66,14 +66,6 @@ const Education = () => {
             >
               📚 {COLLEGE.degree}
             </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              📅 {COLLEGE.period}
-            </motion.p>
           </div>
         </motion.div>
 
