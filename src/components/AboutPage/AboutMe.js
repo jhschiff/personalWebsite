@@ -58,7 +58,7 @@ const AboutMe = () => {
               <FaBolt className="text-2xl text-gray-700" />
             </div>
             <p className="about-intro">
-              Let's connect! Talk about your next project, potential job opportunity, or shoot some hoops
+              Let's connect and talk about a project, job opportunity, or just to shoot some hoops!
             </p>
           </motion.div>
         </div>
