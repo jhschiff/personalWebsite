@@ -1,7 +1,7 @@
 export const EXPERIENCE = [
   {
     title: 'Software Engineer',
-    company: 'Bank of New York',
+    company: 'BNY',
     location: 'Pittsburgh, PA',
     period: 'August 2024 - Present',
     skills: [
