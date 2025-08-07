@@ -40,7 +40,7 @@ const AboutMe = () => {
               <FaStar className="text-2xl text-gray-700" />
             </div>
             <p className="about-intro">
-              I'm Jordan, a passionate software engineer with extensive experience in full-stack development and a drive to build products that make a meaningful impact. Based in Pittsburgh with plans to relocate to NYC, I bring both technical expertise and a collaborative mindset to every project.
+              I'm Jordan, a passionate software engineer with extensive experience in full-stack development and a drive to build products that make a meaningful impact. Based in NYC, I bring both technical expertise and a collaborative mindset to every project.
             </p>
             <div className="flex gap-4 my-2">
               <FaBasketballBall className="text-2xl text-gray-700" />
