@@ -1,9 +1,23 @@
 export const EXPERIENCE = [
   {
     title: 'Software Engineer',
+    company: 'Evertune AI',
+    location: 'New York, NY',
+    period: 'August 2025 - Present',
+    skills: [
+      { name: 'JavaScript', category: 'Languages' },
+      { name: 'Vue.js', category: 'Frontend' },
+      { name: 'Python', category: 'Backend' },
+      { name: 'Google Cloud Platform', category: 'DevOps' }
+    ],
+    achievements: [
+    ]
+  },
+  {
+    title: 'Software Engineer',
     company: 'BNY',
     location: 'Pittsburgh, PA',
-    period: 'August 2024 - Present',
+    period: 'August 2024 - August 2025',
     skills: [
       { name: 'Java', category: 'Languages' },
       { name: 'Angular', category: 'Frontend' },
@@ -142,7 +156,7 @@ export const TECH_STACK = {
   },
   frontend: {
     title: 'Frontend',
-    items: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    items: ['React', 'TypeScript', 'Tailwind', 'Vite', 'Vue.js'],
     description: 'Built responsive, type-safe React applications with modern state management and smooth animations.'
   },
   backend: {

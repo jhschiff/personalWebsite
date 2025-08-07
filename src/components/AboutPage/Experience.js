@@ -8,6 +8,7 @@ import BNYLogo from '../../assets/BNYLogo.png';
 import RSALogo from '../../assets/RSALogo.png';
 import CongruexLogo from '../../assets/CongruexLogo.png';
 import IVCLogo from '../../assets/IVCLogo.jpg';
+import EvertuneAILogo from '../../assets/EvertuneAILogo.png';
 
 const Experience = () => {
   const getLogo = (company) => {
@@ -20,6 +21,8 @@ const Experience = () => {
         return CongruexLogo;
       case 'ivc data and insights':
         return IVCLogo;
+      case 'evertune ai':
+        return EvertuneAILogo;
       default:
         return null;
     }

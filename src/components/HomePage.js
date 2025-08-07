@@ -38,7 +38,7 @@ const HomePage = () => {
                 transition={{ delay: 0.5 }}
                 className="text-gray-600"
               >
-                🖥️ Full Stack Engineer at BNY
+                🖥️ Full Stack Engineer at Evertune AI
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
