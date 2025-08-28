@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const BlogCard = ({ post }) => {
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-  };
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -23,9 +19,11 @@ const BlogCard = ({ post }) => {
           <span className="text-gray-500 text-sm">{post.readTime}</span>
         </div>
         
-        <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors cursor-pointer">
-          {post.title}
-        </h2>
+        <Link to={`/blog/${post.slug}`}>
+          <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors cursor-pointer">
+            {post.title}
+          </h2>
+        </Link>
         
         <p className="text-gray-600 mb-4 line-clamp-3">
           {post.excerpt}
@@ -43,12 +41,12 @@ const BlogCard = ({ post }) => {
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-500 text-sm">
-            {formatDate(post.date)}
-          </span>
-          <button className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
+          <Link 
+            to={`/blog/${post.slug}`}
+            className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+          >
             Read More →
-          </button>
+          </Link>
         </div>
       </div>
     </motion.article>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BlogCard from './BlogPage/BlogCard';
-import { BLOG_POSTS } from '../util/constants';
+import { BLOG_POSTS } from '../util/blogConstants';
 import { setSEO } from '../utils/seo';
 import '../styles/Blog.css';
 
