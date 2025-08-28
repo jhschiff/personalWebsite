@@ -48,13 +48,15 @@ export const updateStructuredData = (data) => {
   document.head.appendChild(script);
 };
 
+const normalizeImageUrl = (imageUrl) => {
+  return imageUrl?.startsWith('http') ? imageUrl : `https://jordanschiff.com${imageUrl}`;
+};
+
 export const setBlogPostSEO = ({ 
   title, 
   description, 
   keywords,
   canonical, 
-  ogTitle, 
-  ogDescription, 
   ogImage,
   tags = [],
   category,
@@ -68,30 +70,28 @@ export const setBlogPostSEO = ({
   if (canonical) updateCanonical(canonical);
   
   // Open Graph tags
-  if (ogTitle) updateMetaProperty('og:title', ogTitle);
-  if (ogDescription) updateMetaProperty('og:description', ogDescription);
+  if (title) updateMetaProperty('og:title', title);
+  if (description) updateMetaProperty('og:description', description);
   if (canonical) updateMetaProperty('og:url', canonical);
   updateMetaProperty('og:type', 'article');
   if (ogImage) {
-    const imageUrl = ogImage.startsWith('http') ? ogImage : `https://jordanschiff.com${ogImage}`;
-    updateMetaProperty('og:image', imageUrl);
+    updateMetaProperty('og:image', normalizeImageUrl(ogImage));
   }
   
   // Twitter Card tags
   updateMetaTag('twitter:card', 'summary_large_image');
-  if (ogTitle) updateMetaTag('twitter:title', ogTitle);
-  if (ogDescription) updateMetaTag('twitter:description', ogDescription);
+  if (title) updateMetaTag('twitter:title', title);
+  if (description) updateMetaTag('twitter:description', description);
   if (ogImage) {
-    const imageUrl = ogImage.startsWith('http') ? ogImage : `https://jordanschiff.com${ogImage}`;
-    updateMetaTag('twitter:image', imageUrl);
+    updateMetaTag('twitter:image', normalizeImageUrl(ogImage));
   }
   
   // Article specific meta tags
   if (publishedTime) updateMetaProperty('article:published_time', publishedTime);
   updateMetaProperty('article:author', 'Jordan Schiff');
-  tags.forEach(tag => {
-    updateMetaProperty('article:tag', tag);
-  });
+  if (tags.length > 0) {
+    updateMetaProperty('article:tag', tags.join(', '));
+  }
   
   // Structured data for articles
   const structuredData = {
@@ -118,7 +118,7 @@ export const setBlogPostSEO = ({
   }
   
   if (ogImage) {
-    structuredData.image = ogImage.startsWith('http') ? ogImage : `https://jordanschiff.com${ogImage}`;
+    structuredData.image = normalizeImageUrl(ogImage);
   }
   
   if (tags.length > 0) {

@@ -13,8 +13,6 @@ const MyJourneyFromUniversityToFullStack = () => {
         description: blogPost.excerpt,
         keywords: blogPost.keywords,
         canonical: blogPost.canonicalUrl || 'https://jordanschiff.com/blog/my-journey-from-university-to-full-stack',
-        ogTitle: blogPost.title,
-        ogDescription: blogPost.excerpt,
         ogImage: blogPost.ogImage,
         tags: blogPost.tags,
         category: blogPost.category,

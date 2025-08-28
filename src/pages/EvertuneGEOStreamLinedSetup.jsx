@@ -15,8 +15,6 @@ const EvertuneGEOStreamlinedSetup = () => {
         description: blogPost.excerpt,
         keywords: blogPost.keywords,
         canonical: blogPost.canonicalUrl,
-        ogTitle: blogPost.title,
-        ogDescription: blogPost.excerpt,
         ogImage: blogPost.ogImage,
         tags: blogPost.tags,
         category: blogPost.category,

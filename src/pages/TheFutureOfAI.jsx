@@ -13,8 +13,6 @@ const TheFutureOfAI = () => {
         description: blogPost.excerpt,
         keywords: blogPost.keywords,
         canonical: blogPost.canonicalUrl || 'https://jordanschiff.com/blog/the-future-of-ai',
-        ogTitle: blogPost.title,
-        ogDescription: blogPost.excerpt,
         ogImage: blogPost.ogImage,
         tags: blogPost.tags,
         category: blogPost.category,

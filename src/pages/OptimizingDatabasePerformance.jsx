@@ -13,8 +13,6 @@ const OptimizingDatabasePerformance = () => {
         description: blogPost.excerpt,
         keywords: blogPost.keywords,
         canonical: blogPost.canonicalUrl || 'https://jordanschiff.com/blog/optimizing-database-performance',
-        ogTitle: blogPost.title,
-        ogDescription: blogPost.excerpt,
         ogImage: blogPost.ogImage,
         tags: blogPost.tags,
         category: blogPost.category,
