@@ -48,10 +48,6 @@ const OptimizingDatabasePerformance = () => {
                 </span>
               ))}
             </div>
-            
-            <p className="text-gray-500 text-sm">
-              Published on November 10, 2024
-            </p>
           </div>
 
           {/* Content */}
