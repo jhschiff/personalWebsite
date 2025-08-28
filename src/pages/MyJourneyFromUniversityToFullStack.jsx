@@ -94,9 +94,9 @@ const MyJourneyFromUniversityToFullStack = () => {
           <motion.div {...pop} className="mb-10 border-l-4 border-indigo-500 bg-indigo-50 p-4 rounded-md">
             <p className="font-semibold text-indigo-900 mb-1">TL;DR</p>
             <p className="text-indigo-900/90">
-              I went from CS lectures to building real apps through internships, scaled enterprise systems at{' '}
-              <a className="underline" href={LINKS.congruex}>Congruex</a>, learned risk & rigor at{' '}
-              <a className="underline" href={LINKS.bny}>BNY</a>, and now help brands win in AI answers (GEO) at{' '}
+              I went from CS lectures to building real apps through internships, scaling enterprise systems at{' '}
+              <a className="underline" href={LINKS.congruex}>Congruex</a>, learning risk & rigor at{' '}
+              <a className="underline" href={LINKS.bny}>BNY</a>, and now helping brands win in AI answers (GEO) at{' '}
               <a className="underline" href={LINKS.evertune}>Evertune</a>. Along the way: ship small, learn fast,
               and turn feedback loops into superpowers.
             </p>
