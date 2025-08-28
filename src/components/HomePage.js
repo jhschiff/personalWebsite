@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
 import blockM from '../assets/BlockM.png';
+import { setSEO } from '../utils/seo';
 
 const HomePage = () => {
+  useEffect(() => {
+    setSEO({
+      title: 'Jordan Schiff - Full Stack Software Engineer | Portfolio',
+      description: 'Jordan Schiff - Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences.',
+      canonical: 'https://jordanschiff.com/',
+      ogTitle: 'Jordan Schiff - Software Engineer',
+      ogDescription: 'Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences.'
+    });
+  }, []);
+
   return (
     <>
-      <Helmet>
-        <title>Jordan Schiff - Full Stack Software Engineer | Portfolio</title>
-        <meta name="description" content="Jordan Schiff - Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences." />
-        <link rel="canonical" href="https://jordanschiff.com/" />
-      </Helmet>
       <section className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row items-center justify-between">

@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BlogCard from './BlogPage/BlogCard';
 import { BLOG_POSTS } from '../util/constants';
+import { setSEO } from '../utils/seo';
 import '../styles/Blog.css';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  
+  useEffect(() => {
+    setSEO({
+      title: 'Blog - Jordan Schiff | Software Engineering Insights & Tech Articles',
+      description: 'Read Jordan Schiff\'s blog posts about software engineering, React development, career insights, and technology trends. Learn from a Full Stack Engineer\'s experiences.',
+      canonical: 'https://jordanschiff.com/blog',
+      ogTitle: 'Blog - Jordan Schiff | Software Engineering Insights',
+      ogDescription: 'Read Jordan Schiff\'s blog posts about software engineering, React development, career insights, and technology trends.'
+    });
+  }, []);
   
   // Get unique categories
   const categories = ['All', ...new Set(BLOG_POSTS.map(post => post.category))];
@@ -18,11 +28,6 @@ const Blog = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Blog - Jordan Schiff | Software Engineering Insights & Tech Articles</title>
-        <meta name="description" content="Read Jordan Schiff's blog posts about software engineering, React development, career insights, and technology trends. Learn from a Full Stack Engineer's experiences." />
-        <link rel="canonical" href="https://jordanschiff.com/blog" />
-      </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
