@@ -1,19 +1,27 @@
 import React, { useEffect } from "react";
 import { motion } from 'framer-motion';
-import { setSEO } from "../utils/seo";
+import { setBlogPostSEO } from "../utils/seo";
 import { BLOG_POSTS } from "../util/blogConstants";
 
 export default function ValueBeyondPrice() {
   useEffect(() => {
     const blogPost = BLOG_POSTS.find(post => post.slug === 'value-beyond-price');
     
-    setSEO({
-      title: `${blogPost?.title} - Jordan Schiff`,
-      description: blogPost?.excerpt,
-      canonical: blogPost?.canonicalUrl,
-      ogTitle: blogPost?.title,
-      ogDescription: blogPost?.excerpt
-    });
+    if (blogPost) {
+      setBlogPostSEO({
+        title: blogPost.title,
+        description: blogPost.excerpt,
+        keywords: blogPost.keywords,
+        canonical: blogPost.canonicalUrl,
+        ogTitle: blogPost.title,
+        ogDescription: blogPost.excerpt,
+        ogImage: blogPost.ogImage,
+        tags: blogPost.tags,
+        category: blogPost.category,
+        publishedTime: '2024-12-15T10:00:00Z',
+        slug: blogPost.slug
+      });
+    }
   }, []);
   return (
     <div className="min-h-screen bg-gray-50 py-20">

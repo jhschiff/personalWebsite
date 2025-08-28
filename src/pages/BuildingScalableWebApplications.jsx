@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { setSEO } from '../utils/seo';
+import { setBlogPostSEO } from '../utils/seo';
 import { BLOG_POSTS } from '../util/blogConstants';
 import reactArchitectureHero from '../assets/blogImages/react-architecture-hero.png';
 import reactArchitectureDiagram from '../assets/blogImages/react-architecture-diagram.webp';
@@ -9,13 +9,21 @@ const BuildingScalableWebApplications = () => {
   useEffect(() => {
     const blogPost = BLOG_POSTS.find(post => post.slug === 'building-scalable-web-applications');
 
-    setSEO({
-      title: `${blogPost?.title} - Jordan Schiff`,
-      description: blogPost?.excerpt,
-      canonical: blogPost?.canonicalUrl,
-      ogTitle: blogPost?.title,
-      ogDescription: blogPost?.excerpt
-    });
+    if (blogPost) {
+      setBlogPostSEO({
+        title: blogPost.title,
+        description: blogPost.excerpt,
+        keywords: blogPost.keywords,
+        canonical: blogPost.canonicalUrl || 'https://jordanschiff.com/blog/building-scalable-web-applications',
+        ogTitle: blogPost.title,
+        ogDescription: blogPost.excerpt,
+        ogImage: blogPost.ogImage,
+        tags: blogPost.tags,
+        category: blogPost.category,
+        publishedTime: '2024-11-20T10:00:00Z',
+        slug: blogPost.slug
+      });
+    }
   }, []);
 
   const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } };

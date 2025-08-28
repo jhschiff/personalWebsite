@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { setSEO } from '../utils/seo';
+import { setBlogPostSEO } from '../utils/seo';
 import { BLOG_POSTS } from '../util/blogConstants';
 // import evertuneGEOHero from '../assets/blogImages/evertune-geo-hero.png';
 // import evertuneGEOFramework from '../assets/blogImages/evertune-geo-framework.webp';
@@ -9,17 +9,21 @@ const EvertuneGEOStreamlinedSetup = () => {
   useEffect(() => {
     const blogPost = BLOG_POSTS.find(post => post.slug === 'evertune-geo-streamlined-setup');
 
-    setSEO({
-      title: `${blogPost?.title || 'Evertune GEO: Streamlined Setup, Integration & UX'} - Jordan Schiff`,
-      description:
-        blogPost?.excerpt ||
-        'Make Generative Engine Optimization effortless. Learn how Evertune’s intuitive design, user-centric interface, and seamless integration framework boost brand visibility across AI-powered search.',
-      canonical: blogPost?.canonicalUrl || 'https://www.jordanschiff.com/blog/evertune-geo-streamlined-setup',
-      ogTitle: blogPost?.title || 'Evertune GEO: Streamlined Setup, Integration & UX',
-      ogDescription:
-        blogPost?.excerpt ||
-        'From fast onboarding to effortless integration, see how Evertune makes GEO simple, scalable, and fun.'
-    });
+    if (blogPost) {
+      setBlogPostSEO({
+        title: blogPost.title,
+        description: blogPost.excerpt,
+        keywords: blogPost.keywords,
+        canonical: blogPost.canonicalUrl,
+        ogTitle: blogPost.title,
+        ogDescription: blogPost.excerpt,
+        ogImage: blogPost.ogImage,
+        tags: blogPost.tags,
+        category: blogPost.category,
+        publishedTime: '2024-12-10T10:00:00Z',
+        slug: blogPost.slug
+      });
+    }
   }, []);
 
   const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } };
