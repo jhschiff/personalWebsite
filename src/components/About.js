@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ProjectCard from './AboutPage/ProjectCard';
 import TechStack from './AboutPage/TechStack';
@@ -10,7 +11,13 @@ import '../styles/About.css';
 
 const About = () => {
   return (
-    <div className="about-section">
+    <>
+      <Helmet>
+        <title>About Jordan Schiff - Software Engineer | Experience & Projects</title>
+        <meta name="description" content="Learn about Jordan Schiff's software engineering experience, projects, and technical skills. Full Stack Engineer with expertise in React, JavaScript, and modern web development." />
+        <link rel="canonical" href="https://jordanschiff.com/about" />
+      </Helmet>
+      <div className="about-section">
       <section id="about">
         <div className="about-container">
           <AboutMe />
@@ -40,7 +47,8 @@ const About = () => {
       </section>
 
       <Education />
-    </div>
+      </div>
+    </>
   );
 };
 

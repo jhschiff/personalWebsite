@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
@@ -6,7 +7,13 @@ import blockM from '../assets/BlockM.png';
 
 const HomePage = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50">
+    <>
+      <Helmet>
+        <title>Jordan Schiff - Full Stack Software Engineer | Portfolio</title>
+        <meta name="description" content="Jordan Schiff - Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences." />
+        <link rel="canonical" href="https://jordanschiff.com/" />
+      </Helmet>
+      <section className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2">
@@ -38,7 +45,7 @@ const HomePage = () => {
                 transition={{ delay: 0.5 }}
                 className="text-gray-600"
               >
-                🖥️ Full Stack Engineer at Evertune AI
+                🖥️ Full Stack Engineer at <a href="https://www.evertune.ai/" target="_blank" rel="noopener noreferrer" className="text-black underline decoration-[#FF6B00] decoration-4 underline-offset-4 hover:decoration- transition-colors rounded-sm px-1 hover:bg-[rgba(255,137,51,0.18)] hover:decoration-[#FF8933]">Evertune</a>
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +55,7 @@ const HomePage = () => {
               >
                 <img 
                   src={blockM} 
-                  alt="University of Michigan Block M" 
+                  alt="University of Michigan Block M logo - Jordan Schiff alumni" 
                   className="w-8 h-8 object-contain"
                 />
                 <span>University of Michigan College of Engineering</span>
@@ -87,13 +94,14 @@ const HomePage = () => {
           >
             <img
               src={headshot}
-              alt="Jordan's Headshot"
+              alt="Jordan Schiff - Full Stack Software Engineer at Evertune AI, University of Michigan Computer Science graduate"
               className="rounded-full w-64 h-64 object-cover mx-auto"
             />
           </motion.div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
