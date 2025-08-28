@@ -91,7 +91,7 @@ const TheFutureOfAI = () => {
               <span className="inline-block bg-emerald-100 text-emerald-800 text-sm font-semibold px-3 py-1 rounded-full">
                 AI Search & GEO
               </span>
-              <span className="text-gray-500 text-sm">8–10 min read</span>
+              <span className="text-gray-500 text-sm">4-6 min read</span>
             </div>
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">

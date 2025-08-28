@@ -31,8 +31,6 @@ export default function ValueBeyondPrice() {
                 Product Insight
               </span>
               <span className="text-gray-500 text-sm">6–8 min read</span>
-              <span className="text-gray-400">•</span>
-              <span className="text-gray-500 text-sm">Updated Aug 2025</span>
             </div>
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">

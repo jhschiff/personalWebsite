@@ -34,7 +34,7 @@ const EvertuneGEOStreamlinedSetup = () => {
             <span className="inline-block bg-emerald-100 text-emerald-800 text-sm font-semibold px-3 py-1 rounded-full">
               GEO / AI Search
             </span>
-            <span className="text-gray-500 text-sm">7–9 min read</span>
+            <span className="text-gray-500 text-sm">5-7 min read</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">

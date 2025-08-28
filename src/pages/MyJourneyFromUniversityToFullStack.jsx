@@ -62,7 +62,7 @@ const MyJourneyFromUniversityToFullStack = () => {
               <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
                 Career & Growth
               </span>
-              <span className="text-gray-500 text-sm">7–9 min read</span>
+              <span className="text-gray-500 text-sm">5-7 min read</span>
             </div>
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -88,10 +88,6 @@ const MyJourneyFromUniversityToFullStack = () => {
                 </span>
               ))}
             </div>
-
-            <p className="text-gray-500 text-sm">
-              Published on November 28, 2024
-            </p>
           </div>
 
           {/* TL;DR */}

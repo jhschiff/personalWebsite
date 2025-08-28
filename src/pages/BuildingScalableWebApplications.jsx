@@ -30,7 +30,7 @@ const BuildingScalableWebApplications = () => {
             <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
               Frontend Development
             </span>
-            <span className="text-gray-500 text-sm">10–12 min read</span>
+            <span className="text-gray-500 text-sm">8 min read</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
