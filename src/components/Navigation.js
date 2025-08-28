@@ -19,6 +19,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-8">
             <RouterLink to="/" className="cursor-pointer hover:text-blue-600">Home</RouterLink>
             <RouterLink to="/about" className="cursor-pointer hover:text-blue-600">About</RouterLink>
+            <RouterLink to="/blog" className="cursor-pointer hover:text-blue-600">Blog</RouterLink>
           </div>
         </div>
       </div>
