@@ -1,3 +1,10 @@
+# Static files should be served directly
+/rss.xml /rss.xml 200
+/feed.xml /feed.xml 200  
+/feed.json /feed.json 200
+/posts/* /posts/:splat 200
+
+# React Router redirects
 /about /index.html 200
 /home /index.html 200
 /* /index.html 200 

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jordanschiff.com/</id>
     <title>Jordan Schiff - Blog</title>
-    <updated>2025-09-05T17:20:29.170Z</updated>
+    <updated>2025-09-05T17:25:52.179Z</updated>
     <generator>Jordan Schiff Personal Website</generator>
     <author>
         <name>Jordan Schiff</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[My Journey from University to Full Stack Engineer]]></title>
         <id>https://jordanschiff.com/blog/my-journey-from-university-to-full-stack</id>
         <link href="https://jordanschiff.com/blog/my-journey-from-university-to-full-stack"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Reflecting on the transition from computer science student to professional software engineer and lessons learned along the way.]]></summary>
         <content type="html"><![CDATA[Starting my career journey at the University of Michigan, I never imagined the path that would lead me to where I am today. This post chronicles my experiences from student projects to professional software development...]]></content>
         <author>
@@ -33,7 +33,7 @@
         <title type="html"><![CDATA[The Future of AI in Software Development]]></title>
         <id>https://jordanschiff.com/blog/the-future-of-ai</id>
         <link href="https://jordanschiff.com/blog/the-future-of-ai"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Exploring how artificial intelligence is transforming the way we write, test, and deploy software applications.]]></summary>
         <content type="html"><![CDATA[As a Full Stack Engineer at Evertune AI, I've witnessed firsthand how AI is revolutionizing software development. From code generation to automated testing, AI tools are becoming indispensable for modern developers...]]></content>
         <author>
@@ -48,7 +48,7 @@
         <id>https://jordanschiff.com/blog/value-beyond-price</id>
         <link href="https://jordanschiff.com/blog/value-beyond-price"/>
         <link rel="enclosure" href="https://jordanschiff.com/evertune-blog.jpg" type="image/jpg"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.]]></summary>
         <content type="html"><![CDATA[Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.]]></content>
         <author>
@@ -63,7 +63,7 @@
         <id>https://jordanschiff.com/blog/evertune-geo-streamlined-setup</id>
         <link href="https://jordanschiff.com/blog/evertune-geo-streamlined-setup"/>
         <link rel="enclosure" href="https://jordanschiff.com/evertune-geo-hero.png" type="image/png"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Make Generative Engine Optimization effortless. Learn how Evertune's intuitive design, user-centric interface, and seamless integration framework boost brand visibility across AI-powered search.]]></summary>
         <content type="html"><![CDATA[Generative AI changed discovery. Evertune makes it easy (and dare we say delightful) to get your brand seen in AI answers—fast onboarding, intuitive workflows, and insights that actually move the needle.]]></content>
         <author>
@@ -77,7 +77,7 @@
         <title type="html"><![CDATA[Optimizing Database Performance in Spring Boot Applications]]></title>
         <id>https://jordanschiff.com/blog/optimizing-database-performance</id>
         <link href="https://jordanschiff.com/blog/optimizing-database-performance"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Practical strategies for improving database query performance and managing connections in enterprise Java applications.]]></summary>
         <content type="html"><![CDATA[Working with large-scale applications at BNY taught me valuable lessons about database optimization. In this technical deep-dive, I share practical strategies for improving query performance, connection pooling, and data modeling in Spring Boot applications...]]></content>
         <author>
@@ -91,7 +91,7 @@
         <title type="html"><![CDATA[Building Scalable Web Applications with React and Modern Architecture]]></title>
         <id>https://jordanschiff.com/blog/building-scalable-web-applications</id>
         <link href="https://jordanschiff.com/blog/building-scalable-web-applications"/>
-        <updated>2025-09-05T17:20:29.170Z</updated>
+        <updated>2025-09-05T17:25:52.179Z</updated>
         <summary type="html"><![CDATA[Exploring best practices for creating maintainable and performant React applications in enterprise environments.]]></summary>
         <content type="html"><![CDATA[In this post, I dive into the architectural decisions that make React applications scale effectively. From component composition patterns to state management strategies, we'll explore how to build applications that grow with your team and requirements...]]></content>
         <author>
