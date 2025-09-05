@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "feed": "^5.1.0",
     "framer-motion": "^12.17.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -13,7 +14,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run generate-rss && react-scripts build",
+    "generate-rss": "node scripts/generateRSS.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

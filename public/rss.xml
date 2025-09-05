@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Jordan Schiff - Blog</title>
+        <link>https://jordanschiff.com/</link>
+        <description>Software engineering insights, technology trends, and lessons learned building scalable applications.</description>
+        <lastBuildDate>Fri, 05 Sep 2025 17:20:29 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Jordan Schiff Personal Website</generator>
+        <language>en</language>
+        <image>
+            <title>Jordan Schiff - Blog</title>
+            <url>https://jordanschiff.com/favicon.ico</url>
+            <link>https://jordanschiff.com/</link>
+        </image>
+        <copyright>All rights reserved 2025, Jordan Schiff</copyright>
+        <atom:link href="https://jordanschiff.com/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[My Journey from University to Full Stack Engineer]]></title>
+            <link>https://jordanschiff.com/blog/my-journey-from-university-to-full-stack</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/my-journey-from-university-to-full-stack</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Reflecting on the transition from computer science student to professional software engineer and lessons learned along the way.]]></description>
+            <content:encoded><![CDATA[Starting my career journey at the University of Michigan, I never imagined the path that would lead me to where I am today. This post chronicles my experiences from student projects to professional software development...]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>Career &amp; Growth</category>
+        </item>
+        <item>
+            <title><![CDATA[The Future of AI in Software Development]]></title>
+            <link>https://jordanschiff.com/blog/the-future-of-ai</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/the-future-of-ai</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Exploring how artificial intelligence is transforming the way we write, test, and deploy software applications.]]></description>
+            <content:encoded><![CDATA[As a Full Stack Engineer at Evertune AI, I've witnessed firsthand how AI is revolutionizing software development. From code generation to automated testing, AI tools are becoming indispensable for modern developers...]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>Technology Trends</category>
+        </item>
+        <item>
+            <title><![CDATA[Value Beyond Price | Evertune]]></title>
+            <link>https://jordanschiff.com/blog/value-beyond-price</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/value-beyond-price</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.]]></description>
+            <content:encoded><![CDATA[Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>Technology Trends</category>
+            <enclosure url="https://jordanschiff.com/evertune-blog.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Evertune Makes GEO Fun: Streamlined Setup, Seamless Integration, Happier Teams]]></title>
+            <link>https://jordanschiff.com/blog/evertune-geo-streamlined-setup</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/evertune-geo-streamlined-setup</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Make Generative Engine Optimization effortless. Learn how Evertune's intuitive design, user-centric interface, and seamless integration framework boost brand visibility across AI-powered search.]]></description>
+            <content:encoded><![CDATA[Generative AI changed discovery. Evertune makes it easy (and dare we say delightful) to get your brand seen in AI answers—fast onboarding, intuitive workflows, and insights that actually move the needle.]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>AI &amp; Marketing</category>
+            <enclosure url="https://jordanschiff.com/evertune-geo-hero.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Optimizing Database Performance in Spring Boot Applications]]></title>
+            <link>https://jordanschiff.com/blog/optimizing-database-performance</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/optimizing-database-performance</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Practical strategies for improving database query performance and managing connections in enterprise Java applications.]]></description>
+            <content:encoded><![CDATA[Working with large-scale applications at BNY taught me valuable lessons about database optimization. In this technical deep-dive, I share practical strategies for improving query performance, connection pooling, and data modeling in Spring Boot applications...]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>Backend Development</category>
+        </item>
+        <item>
+            <title><![CDATA[Building Scalable Web Applications with React and Modern Architecture]]></title>
+            <link>https://jordanschiff.com/blog/building-scalable-web-applications</link>
+            <guid isPermaLink="false">https://jordanschiff.com/blog/building-scalable-web-applications</guid>
+            <pubDate>Fri, 05 Sep 2025 17:20:29 GMT</pubDate>
+            <description><![CDATA[Exploring best practices for creating maintainable and performant React applications in enterprise environments.]]></description>
+            <content:encoded><![CDATA[In this post, I dive into the architectural decisions that make React applications scale effectively. From component composition patterns to state management strategies, we'll explore how to build applications that grow with your team and requirements...]]></content:encoded>
+            <author>jordan41schiff@gmail.com (Jordan Schiff)</author>
+            <category>Frontend Development</category>
+        </item>
+    </channel>
+</rss>

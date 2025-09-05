@@ -1,0 +1,106 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jordan Schiff - Blog",
+    "home_page_url": "https://jordanschiff.com/",
+    "feed_url": "https://jordanschiff.com/feed.json",
+    "description": "Software engineering insights, technology trends, and lessons learned building scalable applications.",
+    "icon": "https://jordanschiff.com/favicon.ico",
+    "author": {
+        "name": "Jordan Schiff",
+        "url": "https://jordanschiff.com"
+    },
+    "items": [
+        {
+            "id": "https://jordanschiff.com/blog/my-journey-from-university-to-full-stack",
+            "content_html": "Starting my career journey at the University of Michigan, I never imagined the path that would lead me to where I am today. This post chronicles my experiences from student projects to professional software development...",
+            "url": "https://jordanschiff.com/blog/my-journey-from-university-to-full-stack",
+            "title": "My Journey from University to Full Stack Engineer",
+            "summary": "Reflecting on the transition from computer science student to professional software engineer and lessons learned along the way.",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "Career & Growth"
+            ]
+        },
+        {
+            "id": "https://jordanschiff.com/blog/the-future-of-ai",
+            "content_html": "As a Full Stack Engineer at Evertune AI, I've witnessed firsthand how AI is revolutionizing software development. From code generation to automated testing, AI tools are becoming indispensable for modern developers...",
+            "url": "https://jordanschiff.com/blog/the-future-of-ai",
+            "title": "The Future of AI in Software Development",
+            "summary": "Exploring how artificial intelligence is transforming the way we write, test, and deploy software applications.",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "Technology Trends"
+            ]
+        },
+        {
+            "id": "https://jordanschiff.com/blog/value-beyond-price",
+            "content_html": "Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.",
+            "url": "https://jordanschiff.com/blog/value-beyond-price",
+            "title": "Value Beyond Price | Evertune",
+            "summary": "Discover how Evertune's precision engineering and premium craftsmanship create exceptional quality, offering musicians top-tier performance, unmatched durability, and a long-lasting investment in their sound.",
+            "image": "https://jordanschiff.com/evertune-blog.jpg",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "Technology Trends"
+            ]
+        },
+        {
+            "id": "https://jordanschiff.com/blog/evertune-geo-streamlined-setup",
+            "content_html": "Generative AI changed discovery. Evertune makes it easy (and dare we say delightful) to get your brand seen in AI answers—fast onboarding, intuitive workflows, and insights that actually move the needle.",
+            "url": "https://jordanschiff.com/blog/evertune-geo-streamlined-setup",
+            "title": "Evertune Makes GEO Fun: Streamlined Setup, Seamless Integration, Happier Teams",
+            "summary": "Make Generative Engine Optimization effortless. Learn how Evertune's intuitive design, user-centric interface, and seamless integration framework boost brand visibility across AI-powered search.",
+            "image": "https://jordanschiff.com/evertune-geo-hero.png",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "AI & Marketing"
+            ]
+        },
+        {
+            "id": "https://jordanschiff.com/blog/optimizing-database-performance",
+            "content_html": "Working with large-scale applications at BNY taught me valuable lessons about database optimization. In this technical deep-dive, I share practical strategies for improving query performance, connection pooling, and data modeling in Spring Boot applications...",
+            "url": "https://jordanschiff.com/blog/optimizing-database-performance",
+            "title": "Optimizing Database Performance in Spring Boot Applications",
+            "summary": "Practical strategies for improving database query performance and managing connections in enterprise Java applications.",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "Backend Development"
+            ]
+        },
+        {
+            "id": "https://jordanschiff.com/blog/building-scalable-web-applications",
+            "content_html": "In this post, I dive into the architectural decisions that make React applications scale effectively. From component composition patterns to state management strategies, we'll explore how to build applications that grow with your team and requirements...",
+            "url": "https://jordanschiff.com/blog/building-scalable-web-applications",
+            "title": "Building Scalable Web Applications with React and Modern Architecture",
+            "summary": "Exploring best practices for creating maintainable and performant React applications in enterprise environments.",
+            "date_modified": "2025-09-05T17:20:29.170Z",
+            "author": {
+                "name": "Jordan Schiff",
+                "url": "https://jordanschiff.com"
+            },
+            "tags": [
+                "Frontend Development"
+            ]
+        }
+    ]
+}
