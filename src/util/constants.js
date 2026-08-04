@@ -6,11 +6,16 @@ export const EXPERIENCE = [
     period: 'August 2025 - Present',
     skills: [
       { name: 'JavaScript', category: 'Languages' },
+      { name: 'Python', category: 'Languages' },
       { name: 'Vue.js', category: 'Frontend' },
-      { name: 'Python', category: 'Backend' },
+      { name: 'FastAPI', category: 'Backend' },
+      { name: 'MongoDB', category: 'Backend' },
       { name: 'Google Cloud Platform', category: 'DevOps' }
     ],
     achievements: [
+      'Built AI-powered brand visibility and GEO analytics products, including Site Audit, Content Analytics, Brand Dashboard, and role-based access features across Vue, FastAPI, MongoDB, and cloud services used by 200+ enterprise brands',
+      'Driving features end-to-end from API design and database integration to frontend UX, performance optimization, automated testing, permissions, and production support for tools that help brands understand and improve how they appear across AI search and LLM-generated answers',
+      'Scaling an early-stage AI startup through a 4x team expansion by contributing to hiring interviews, frontend take-home reviews, onboarding-quality code patterns, and creating a component library'
     ]
   },
   {
