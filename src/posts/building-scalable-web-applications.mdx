@@ -1,0 +1,138 @@
+---
+title: Building Scalable Web Applications with React and Modern Architecture
+date: "2024-11-20"
+readTime: 8 min read
+category: Frontend Development
+excerpt: Exploring best practices for creating maintainable and performant React applications in enterprise environments.
+tags: [React, Architecture, JavaScript, Best Practices]
+ogImage: /images/blog/react-architecture-hero.png
+---
+
+Exploring pragmatic patterns for React at scale—from component design and state strategy to performance, testing, and developer experience. Fewer footguns, more flow. 🚀
+
+<Figure
+  src="/images/blog/react-architecture-hero.png"
+  alt="Abstract architecture diagram representing scalable React app structure"
+  caption="Great architecture is less about clever tricks—and more about consistent, boring excellence."
+/>
+
+<Tldr color="blue">
+Keep components small and composable, isolate domain state, streamline data fetching, and invest early in performance and tests. Automate the boring stuff; celebrate the consistent stuff. 🧰
+</Tldr>
+
+## Table of Contents
+
+- [Component Architecture](#component-architecture)
+- [State Management at Scale](#state-management)
+- [Data Fetching & Caching](#data-fetching)
+- [Performance Considerations](#performance)
+- [Testing Strategy](#testing)
+- [Developer Experience (DX)](#dx)
+- [Monitoring & Reliability](#monitoring)
+- [Practical Checklist](#checklist)
+
+As teams and codebases grow, the challenge isn’t merely “building features”—it’s building features that remain easy to change. Let’s look at concrete patterns that keep your React app resilient and your team happy.
+
+<h2 id="component-architecture">Component Architecture</h2>
+
+Prefer composition over inheritance. Model components around *capabilities* and *responsibilities* rather than pages. Keep UI components dumb, and extract domain logic into hooks or services.
+
+**Example: “Headless” UI hook + presentational component**
+
+```jsx
+// useCounter.js
+import { useState } from 'react';
+export function useCounter({ initial = 0 } = {}) {
+  const [count, set] = useState(initial);
+  const inc = () => set(c => c + 1);
+  const dec = () => set(c => c - 1);
+  return { count, inc, dec };
+}
+
+// Counter.jsx
+export function Counter({ initial }) {
+  const { count, inc, dec } = useCounter({ initial });
+  return (
+    <div className="inline-flex items-center gap-3">
+      <button onClick={dec} className="px-2 py-1 border rounded">-</button>
+      <span>{count}</span>
+      <button onClick={inc} className="px-2 py-1 border rounded">+</button>
+    </div>
+  );
+}
+```
+
+<h2 id="state-management">State Management at Scale</h2>
+
+Separate **server cache** (data from your API) from **client state** (form values, UI flags). Use simple local state first; reach for libraries when patterns repeat.
+
+- **Redux Toolkit**: Opinionated, great for complex domain logic, middleware, devtools.
+- **Zustand**: Minimal, ergonomic for feature-scoped stores; easy to keep code local.
+- **Context**: Fine for stable, low-frequency values (theme, auth user), not for hot data.
+
+<Figure
+  src="/images/blog/react-architecture-diagram.webp"
+  alt="Component layers and data flow: UI, hooks, services, API"
+  caption="Keep domain state close to where it’s used. Push server data management to a caching layer."
+/>
+
+<h2 id="data-fetching">Data Fetching & Caching</h2>
+
+Libraries like **TanStack Query (React Query)** or **RTK Query** centralize network logic, cache results, and simplify retries, background refetching, and pagination.
+
+<Callout title="Pro tip" color="emerald">
+Treat server data as a cache—*not* state. Co-locate queries with components, and keep mutations declarative.
+</Callout>
+
+<h2 id="performance">Performance Considerations</h2>
+
+- **Code splitting** with dynamic `import()` for heavy routes/widgets.
+- **Memoization** via `useMemo`/`useCallback` for hot paths (measure first!).
+- **Virtualization** for big lists (e.g., react-window).
+- **Debounce/throttle** chatty inputs and scroll handlers.
+- **Images**: lazy-load, use modern formats (WebP/AVIF), and proper sizes.
+
+<h2 id="testing">Testing Strategy</h2>
+
+Aim for a healthy mix: unit tests for logic, integration tests for components/hooks, and a sprinkle of E2E for critical flows.
+
+- **Unit**: Vitest/Jest for pure functions and hooks.
+- **Integration**: React Testing Library—test behavior, not implementation.
+- **E2E**: Playwright or Cypress for happy paths and auth.
+
+<h2 id="dx">Developer Experience (DX)</h2>
+
+Fast feedback loops keep teams shipping. Add ESLint + Prettier, type-checking, commit hooks, and a robust CI that runs tests and builds on PR.
+
+<Callout title="Quality gates you’ll actually love:" color="purple">
+
+- Type-check + lint on pre-commit (Husky + lint-staged).
+- PR runs unit + integration tests, reports coverage.
+- Preview deployments per PR.
+
+</Callout>
+
+<h2 id="monitoring">Monitoring & Reliability</h2>
+
+Add error tracking (e.g., Sentry) and web vitals (CLS, LCP, TTFB) dashboards. Alert on user-impacting regressions, not just console noise.
+
+<h2 id="checklist">Practical Checklist ✅</h2>
+
+<Checklist icon="🧩">
+
+- Feature-first folders (co-locate UI, hooks, tests)
+- Server cache via React Query or RTK Query
+- Local UI state stays local (no global everything)
+- Code splitting for heavy routes
+- Lazy-load images; provide width/height
+- Test pyramid: unit > integration > E2E
+- ESLint + Prettier + TypeScript (or JSDoc types)
+- CI with build + test + preview deploys
+- Sentry (errors) + Web Vitals monitoring
+- Document decisions in ADRs (lightweight!)
+
+</Checklist>
+
+<Cta>
+Scaling isn’t a single silver bullet—it’s the accumulation of small, boring, excellent decisions. Start with composition, clarify your state story, measure performance early, and keep the feedback loop fast. Future-you (and your teammates) will thank you. 🙌
+</Cta>

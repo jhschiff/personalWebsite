@@ -1,20 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
 import blockM from '../assets/BlockM.png';
-import { setSEO } from '../utils/seo';
 
 const HomePage = () => {
-  useEffect(() => {
-    setSEO({
-      title: 'Jordan Schiff - Full Stack Software Engineer | Portfolio',
-      description: 'Jordan Schiff - Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences.',
-      canonical: 'https://jordanschiff.com/',
-      ogTitle: 'Jordan Schiff - Software Engineer',
-      ogDescription: 'Full Stack Software Engineer at Evertune AI. University of Michigan Computer Science graduate specializing in building impactful products and exceptional user experiences.'
-    });
-  }, []);
 
   return (
     <>

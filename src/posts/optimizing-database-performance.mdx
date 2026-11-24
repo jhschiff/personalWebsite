@@ -1,0 +1,152 @@
+---
+title: Optimizing Database Performance in Spring Boot Applications
+date: "2024-11-15"
+readTime: 9–11 min read
+category: Backend Development
+excerpt: Practical strategies for improving database query performance and managing connections in enterprise Java applications.
+tags: [Java, Spring Boot, Database, Performance]
+keywords: Java, Spring Boot, Hibernate, JPA, PostgreSQL, HikariCP, Performance, N+1, Caching, Redis
+---
+
+Make your JVM fly: fix N+1s, tune HikariCP like a pro, measure what matters, and cache the right things—without shipping footguns. ✈️
+
+<Tldr color="indigo">
+Profile first, index what queries actually use, eliminate N+1s, tune HikariCP for your traffic shape, keep JPA smart (fetch plans/batching), watch DB & pool metrics, and add caching where reads dominate.
+</Tldr>
+
+## Table of Contents
+
+- [Query Optimization Fundamentals](#queries)
+- [Killing the N+1 Problem](#n-plus-one)
+- [Connection Pool Management (HikariCP)](#pooling)
+- [JPA/Hibernate Performance Patterns](#jpa)
+- [Monitoring & Profiling](#observability)
+- [Caching Strategies](#caching)
+- [Quick Checklist](#checklist)
+
+Most “slow database” stories are actually “slow queries + sad pool settings + unobserved hotspots.” Let’s fix those—systematically.
+
+<h2 id="queries">Query Optimization Fundamentals</h2>
+
+Start with real traffic. Capture slow queries (&gt; p95) and run `EXPLAIN (ANALYZE, BUFFERS)`. Add only the indexes your workload needs; remove dead ones. Prefer narrow covering indexes over kitchen-sink composites.
+
+**Example: Postgres index + targeted query**
+
+```sql
+-- Index tuned for lookup by (status, created_at DESC)
+CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_orders_status_created_at
+ON orders (status, created_at DESC);
+
+-- Query only what you need (avoid SELECT *)
+SELECT id, total, created_at
+FROM orders
+WHERE status = 'PAID'
+ORDER BY created_at DESC
+LIMIT 50;
+```
+
+<h2 id="n-plus-one">Killing the N+1 Problem</h2>
+
+N+1s hide behind convenient abstractions. Detect them with SQL logs or Hibernate statistics, then eliminate with **fetch joins**, **@EntityGraph**, or batched queries.
+
+<Callout title="Pro tip" color="emerald">
+“Lazy” doesn’t mean “later is faster.” Use explicit fetch plans for hot paths; keep defaults conservative elsewhere.
+</Callout>
+
+**JPQL fetch join**
+
+```java
+@Query("SELECT o FROM Order o JOIN FETCH o.items WHERE o.id IN :ids")
+List<Order> findWithItems(@Param("ids") List<Long> ids);
+```
+
+<h2 id="pooling">Connection Pool Management (HikariCP)</h2>
+
+Right-size the pool to match DB concurrency and app threads. Too small = contention; too large = DB thrash. Measure borrow times, active/idle counts, and timeouts under load.
+
+**application.yml (sane starting point)**
+
+```yaml
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 20       # start near DB core count; load test to confirm
+      minimum-idle: 5
+      connection-timeout: 2500    # ms to wait for a connection before failing fast
+      idle-timeout: 600000        # 10m
+      max-lifetime: 1800000       # 30m < DB wait_timeout
+  jpa:
+    properties:
+      hibernate.hikari.metricsEnabled: true
+```
+
+<h2 id="jpa">JPA/Hibernate Performance Patterns</h2>
+
+- **Fetch plans**: use `@EntityGraph` or fetch joins on read-heavy endpoints.
+- **Batching**: enable `hibernate.jdbc.batch_size` for inserts/updates.
+- **DTO projections**: avoid loading full aggregates for list views.
+- **Pagination**: always page list endpoints; avoid giant `IN` clauses.
+- **Second-level cache**: use sparingly for immutable reference data.
+
+**Batching & projections**
+
+```java
+# application.yml
+spring:
+  jpa:
+    properties:
+      hibernate.jdbc.batch_size: 50
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+
+// Repository projection example
+public interface OrderSummary {
+  Long getId();
+  BigDecimal getTotal();
+  Instant getCreatedAt();
+}
+
+@Query("SELECT o.id AS id, o.total AS total, o.createdAt AS createdAt FROM Order o WHERE o.status=:status")
+Page<OrderSummary> findSummaries(@Param("status") Status status, Pageable pageable);
+```
+
+<h2 id="observability">Monitoring & Profiling</h2>
+
+What gets measured gets faster. Expose pool/DB metrics via Micrometer; graph them in Grafana. Enable slow query logs and use sampling profilers to catch CPU hogs.
+
+- **Pool:** borrow time p95/p99, active vs. max, timeout count.
+- **DB:** slow query count, buffer/cache hit ratio, lock waits.
+- **App:** endpoint latency, GC pauses, heap pressure.
+
+<h2 id="caching">Caching Strategies</h2>
+
+Cache reads with stable keys and clear TTLs. Keep caches coherent (evict on write) and observable. Start at the application layer; add HTTP/CDN when it helps.
+
+**Spring Cache + Redis**
+
+```java
+@Cacheable(value = "product", key = "#id", unless = "#result == null")
+public ProductDto getProduct(Long id) { ... }
+
+@CacheEvict(value = "product", key = "#id")
+public void updateProduct(Long id, UpdateCmd cmd) { ... }
+```
+
+<h2 id="checklist">Quick Checklist ✅</h2>
+
+<Checklist icon="⚡">
+
+- Capture p95/p99 slow queries from prod-like traffic
+- Add the 1–2 missing indexes that matter; drop dead ones
+- Eliminate N+1s with fetch joins or @EntityGraph
+- Right-size HikariCP (verify with load tests)
+- Enable batching for writes; use projections for reads
+- Add Micrometer + dashboards for pool/DB metrics
+- Introduce cache for hot reads with clear TTLs/evictions
+- Page everything; avoid SELECT \* and giant IN lists
+
+</Checklist>
+
+<Cta>
+Performance isn’t a mystery—it’s a habit. Measure, tune, validate, and repeat until the speed you need becomes the speed you keep. Future incidents will thank you. 🙌
+</Cta>

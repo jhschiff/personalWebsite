@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Jordan Schiff" />
+    <meta property="og:site_name" content="Jordan Schiff Portfolio" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" title="Jordan Schiff - Blog" href="/rss.xml" />
+    <!-- Per-page title/meta/canonical/JSON-LD are injected here at build time (scripts/prerender.mjs) -->
+    <!--seo-->
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jordan Schiff",
+      "jobTitle": "Full Stack Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Evertune AI"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University of Michigan College of Engineering"
+      },
+      "description": "Full Stack Software Engineer specializing in building impactful products and exceptional user experiences",
+      "url": "https://jordanschiff.com",
+      "image": "https://jordanschiff.com/headshot.jpeg",
+      "telephone": "+1-720-626-9100",
+      "knowsAbout": ["Software Engineering", "Full Stack Development", "React", "JavaScript", "Computer Science", "Web Development"],
+      "sameAs": [
+        "https://linkedin.com/in/jordan-schiff",
+        "https://github.com/jordanschiff"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

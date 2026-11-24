@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import BlogCard from './BlogPage/BlogCard';
-import { BLOG_POSTS } from '../util/blogConstants';
-import { setSEO } from '../utils/seo';
+import { BLOG_POSTS } from '../posts';
 import '../styles/Blog.css';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  useEffect(() => {
-    setSEO({
-      title: 'Blog - Jordan Schiff | Software Engineering Insights & Tech Articles',
-      description: 'Read Jordan Schiff\'s blog posts about software engineering, React development, career insights, and technology trends. Learn from a Full Stack Engineer\'s experiences.',
-      canonical: 'https://jordanschiff.com/blog',
-      ogTitle: 'Blog - Jordan Schiff | Software Engineering Insights',
-      ogDescription: 'Read Jordan Schiff\'s blog posts about software engineering, React development, career insights, and technology trends.'
-    });
-  }, []);
   
   // Get unique categories
   const categories = ['All', ...new Set(BLOG_POSTS.map(post => post.category))];
@@ -77,7 +67,7 @@ const Blog = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
+              <BlogCard key={post.slug} post={post} />
             ))}
           </motion.div>
 

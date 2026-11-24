@@ -15,3 +15,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Blog post (MDX) blocks */
+.prose details {
+  @apply border rounded-md p-4 my-3;
+}
+.prose summary {
+  @apply font-semibold cursor-pointer;
+}
+.checklist ul {
+  @apply grid md:grid-cols-2 gap-3 list-none p-0 my-6;
+}
+.checklist li {
+  @apply bg-gray-50 border rounded-md p-3 text-gray-800;
+}
+.checklist li::before {
+  content: var(--icon);
+  margin-right: 0.5rem;
+}

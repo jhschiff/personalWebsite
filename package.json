@@ -11,17 +11,10 @@
     "react-router-dom": "^7.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "npm run generate-rss && react-scripts build",
-    "generate-rss": "node scripts/generateRSS.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir build-ssr && node scripts/prerender.mjs",
+    "preview": "vite preview --outDir build"
   },
   "browserslist": {
     "production": [
