@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../../util/motion';
 import { TECH_STACK } from '../../util/constants';
 import '../../styles/TechStack.css';
 

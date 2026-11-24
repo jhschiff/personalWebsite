@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../../util/motion';
 import { useParams } from 'react-router-dom';
 import { BLOG_POSTS } from '../../posts';
 import mdxComponents from './MdxComponents';

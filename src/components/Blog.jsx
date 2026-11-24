@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../util/motion';
 import BlogCard from './BlogPage/BlogCard';
 import { BLOG_POSTS } from '../posts';
 import '../styles/Blog.css';

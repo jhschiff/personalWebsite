@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../util/motion';
 import ProjectCard from './AboutPage/ProjectCard';
 import TechStack from './AboutPage/TechStack';
 import Experience from './AboutPage/Experience';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../util/motion';
 import ContactButtons from './HomePage/ContactButtons';
 import headshot from '../assets/headshot.jpeg';
 import blockM from '../assets/BlockM.png';

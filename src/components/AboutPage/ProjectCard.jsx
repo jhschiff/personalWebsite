@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../../util/motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard = ({ title, description, technologies, githubLink, demoLink }) => {

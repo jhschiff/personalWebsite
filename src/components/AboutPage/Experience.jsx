@@ -1,11 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../../util/motion';
 import { EXPERIENCE } from '../../util/constants';
 import '../../styles/Experience.css';
 
 // Import company logos
 import BNYLogo from '../../assets/BNYLogo.png';
-import RSALogo from '../../assets/RSALogo.png';
+import RSALogo from '../../assets/RSALogo.webp';
 import CongruexLogo from '../../assets/CongruexLogo.png';
 import IVCLogo from '../../assets/IVCLogo.jpg';
 import EvertuneAILogo from '../../assets/EvertuneAILogo.png';

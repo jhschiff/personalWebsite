@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import clipart from '../assets/clipartBW.png';
+import clipart from '../assets/clipartBW.webp';
 
 const Navigation = () => {
   return (

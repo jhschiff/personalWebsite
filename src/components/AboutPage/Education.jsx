@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../../util/motion';
 import { COLLEGE } from '../../util/constants';
 import blockM from '../../assets/BlockM.png';
 import { FaGraduationCap, FaStar, FaBook, FaUsers } from 'react-icons/fa';
